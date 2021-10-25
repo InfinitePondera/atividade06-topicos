@@ -47,10 +47,14 @@ gerentes = funcionarios.filter((func) => {
     return func.categoria == 'gerente';
 });
 
-
 menorId = funcionarios.reduce(function(anterior, atual) {
     return anterior.id < atual.id ? anterior : atual;
 });
 
+maiusculo = funcionarios.map(function(nomes) {
+    return nomes.nome.toUpperCase();
+});
+
 console.log(gerentes);
 console.log(menorId);
+console.log(maiusculo);
